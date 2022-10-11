@@ -142,3 +142,10 @@
     - --args=terraform
   files: \.tf$
   require_serial: true
+
+- id: terraform_test
+  name: Terraform Test
+  description: Runs terraform test on the current module.
+  entry: hooks/terraform_test.sh
+  language: script
+  always_run: true

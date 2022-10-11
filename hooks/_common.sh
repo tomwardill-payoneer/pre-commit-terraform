@@ -146,6 +146,7 @@ function common::is_hook_run_on_whole_repo {
   local -r hook_id="$1"
   shift
   local -a -r files=("$@")
+  echo "1"
   # get directory containing `.pre-commit-hooks.yaml` file
   local -r root_config_dir="$(dirname "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)")"
   # get included and excluded files from .pre-commit-hooks.yaml file
